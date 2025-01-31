@@ -35,7 +35,8 @@
           .primary-btn:hover{
             background-color: rgb(255, 249, 244);
             border: 2px solid rgb(255, 220, 38);
-          }      
+          }     
+        
 
      </style>
       <script>
@@ -55,61 +56,54 @@
 <body>
     <header>
 
-      <nav class="bg-bg-primary sora">
-        <div class="navbar container mx-auto">
-          <div class="flex flex-1 justify-between">
-            <div class="flex">
+      <nav class="bg-bg-primary sora w-full overflow-hidden">
+        <section class="container max-w-[1320px] mx-auto px-4 lg:px-0">
+          <div class="navbar flex justify-between items-center py-3">
+            <!-- Logo Section -->
+            <div class="flex items-center">
               <img class="w-8 h-6 pr-2" src="./c1-assets/logo-header.png" alt="footprint of a cat">
               <h1 class="text-xl font-bold hidden lg:flex">Browse<span class="text-primary-color">4</span>Pets</h1>
             </div>
-            <div class="dropdown flex">
-              <div tabindex="0" role="button" class=" btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16" />
+ 
+            <!-- Mobile Menu (DaisyUI Dropdown) -->
+            <div class="dropdown lg:hidden">
+              <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://w...content-available-to-author-only...3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
-              </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow text-base">
-                <li><a>Find a pet</a></li>
-                
-                <li ><a>Breeds</a></li>
-                <li><a>Contact us</a></li>
+              </label>
+            </div>
+ 
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-base flex space-x-6">
+                <li><a href="#">Find a pet</a></li>
+                <li><a href="#">Breeds</a></li>
+                <li><a href="#">Contact us</a></li>
               </ul>
             </div>
+ 
+            <!-- Right Side Icons & Buttons -->
+            <div class="hidden lg:flex lg:gap-3 items-center">
+              <a href=""><i class="fa-regular fa-bell"></i></a>
+              <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+              <button class="btn btn-outline border border-primary-color px-11 login-btn">Login</button>
+              <button class="btn bg-primary-color px-11 primary-btn">Register</button>
+            </div>
           </div>
-          <div class="hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-base">
-              <li><a>Find a pet</a></li>
-                <li><a>Breeds</a></li>
-                <li><a>Contact us</a></li>
-            </ul>
-          </div>
-          <div class=" hidden lg:flex lg:gap-3">
-            <i class="fa-regular fa-bell"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <button class="btn btn-outline border border-primary-color px-12 login-btn">Login</button>
-            <button class="btn bg-primary-color px-12 primary-btn">Register</button>
-          </div>
-        </div>
+        </section>
       </nav>
 
       <!-- banner section  -->
 
-      <div class="banner container mx-auto">
-          <div class="banner-description">
-            <h1 class="adlam-display">Pamper Your Pet, Because They Deserve the Bes</h1>
-            <p class="sora">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-            <button class="btn bg-primary-color px-12 primary-btn text-base">Find a pet</button>
+      <div class="banner max-w-[1250px] mx-auto mt-14 relative">
+          <div class="banner-description w-3/4 md:w-1/2 z-10">
+            <h1 class="adlam-display text-2xl lg:text-5xl mb-4">Pamper Your Pet, <br> Because They Deserve <br> the Bes</h1>
+            <p class="sora text-base lg:text-xl text-gray-500 mb-6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+            <button class="btn bg-primary-color px-8 md:px-12 primary-btn text-base sora">Find a pet</button>
+          </div>
+          <div class="banner-image absolute -z-10 top-12 mt-24 md:-top-12 md:mt-0">
+            <img src="./c1-assets/cat-big.png" alt="">
           </div>
       </div>
        
