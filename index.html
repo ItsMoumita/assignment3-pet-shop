@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,9 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+     <!-- font awesome cdn -->
+     <script src="https://kit.fontawesome.com/96ed21ca12.js" crossorigin="anonymous"></script>
 
      <!-- daisyUI cdn  -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -24,13 +27,92 @@
                 font-weight: 400;
                 font-style: normal;
                 }
+          .login-btn:hover{
+                  background-color: rgb(255, 220, 38);
+                  border: none;
+                  color: black;
+          }
+          .primary-btn:hover{
+            background-color: rgb(255, 249, 244);
+            border: 2px solid rgb(255, 220, 38);
+          }      
 
      </style>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': 'rgb(255, 220, 38)',
+                'bg-primary': 'rgb(255, 249, 244)',
+              }
+            }
+          }
+        }
+      </script>
      
 </head>
 <body>
     <header>
 
+      <nav class="bg-bg-primary sora">
+        <div class="navbar container mx-auto">
+          <div class="flex flex-1 justify-between">
+            <div class="flex">
+              <img class="w-8 h-6 pr-2" src="./c1-assets/logo-header.png" alt="footprint of a cat">
+              <h1 class="text-xl font-bold hidden lg:flex">Browse<span class="text-primary-color">4</span>Pets</h1>
+            </div>
+            <div class="dropdown flex">
+              <div tabindex="0" role="button" class=" btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow text-base">
+                <li><a>Find a pet</a></li>
+                
+                <li ><a>Breeds</a></li>
+                <li><a>Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-base">
+              <li><a>Find a pet</a></li>
+                <li><a>Breeds</a></li>
+                <li><a>Contact us</a></li>
+            </ul>
+          </div>
+          <div class=" hidden lg:flex lg:gap-3">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="btn btn-outline border border-primary-color px-12 login-btn">Login</button>
+            <button class="btn bg-primary-color px-12 primary-btn">Register</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner section  -->
+
+      <div class="banner container mx-auto">
+          <div class="banner-description">
+            <h1 class="adlam-display">Pamper Your Pet, Because They Deserve the Bes</h1>
+            <p class="sora">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+            <button class="btn bg-primary-color px-12 primary-btn text-base">Find a pet</button>
+          </div>
+      </div>
+       
     </header>
 
     <main>
