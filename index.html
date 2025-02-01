@@ -55,7 +55,20 @@
          .animate-pop {
                  animation: popup 2s ease-in-out infinite;
             }
-
+             
+            .animat{
+        background: linear-gradient(to right, #65a8f4, #e5a6ea);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+    }
+    @keyframes animate-gradient{
+        to {
+            background-position: 200%;
+        }
+    }
   
 
      </style>
@@ -120,7 +133,7 @@
       <h1 class="adlam-display text-3xl lg:text-5xl font-bold mb-4 leading-tight animate-pop">
           Pamper Your Pet, <br> Because They Deserve <br> the Best
       </h1>
-      <p class="sora text-base lg:text-xl text-gray-500 mb-6">
+      <p class="sora text-base lg:text-xl text-gray-500 mb-6 animat">
           Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
       </p>
       <button class="btn bg-primary-color px-8 md:px-12 primary-btn text-base sora">
@@ -369,6 +382,48 @@
           </div>
         </div>
      </section>
+
+     <!-- food section  -->
+     <section class="bg-[#FFF9F4] py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl md:4xl adlam-display font-bold mb-8 md: mb-12 text-center">Premium Pet Foods</h2>
+        <p class="text-center text-gray-600 mb-10">
+          Give your pets the nutrition they deserve with our high-quality pet foods.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Food Item 1 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+            <img src="./c1-assets/dog-food.jpg" alt="Dog Food" class="mx-auto mb-4 w-40 h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-semibold text-gray-700">Healthy Dog Food</h3>
+            <p class="text-gray-600 mt-2">Rich in protein and vitamins for a happy, healthy pup.</p>
+            <button class="mt-4 px-4 py-2 bg-[#FFDC26] text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition">
+              Shop Now
+            </button>
+          </div>
+    
+          <!-- Food Item 2 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+            <img src="./c1-assets/Cat_Foods.jpg" alt="Cat Food" class="mx-auto mb-4 w-40 h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-semibold text-gray-700">Nutritious Cat Food</h3>
+            <p class="text-gray-600 mt-2">Balanced meals to keep your cat active and strong.</p>
+            <button class="mt-4 px-4 py-2 bg-[#FFDC26] text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition">
+              Shop Now
+            </button>
+          </div>
+    
+          <!-- Food Item 3 -->
+          <div class="bg-white shadow-lg rounded-2xl p-6 text-center">
+            <img src="./c1-assets/fish-food.jpg" alt="Bird Food" class="mx-auto mb-4 w-40 h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-semibold text-gray-700">Organic Bird Food</h3>
+            <p class="text-gray-600 mt-2">Made with natural ingredients for a healthy feathered friend.</p>
+            <button class="mt-4 px-4 py-2 bg-[#FFDC26] text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
      <!-- price section  -->
       <section class="max-w-[1250px] mx-auto browse mt-20 flex flex-col mb-[540px] md:mb-[240px] lg:mb-[350px]
